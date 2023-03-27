@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block titleblock %}    
+    
+        {% endblock %}
+    </title>
+</head>
+<body style="background-color:powderblue;">
+    <nav>
+        <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('history') }}">History</a></li>
+    </ul>
+    </nav>
+    <style>
+        ul {
+          list-style-type: none;
+          overflow: hidden;
+          background-color: #00008B;
+        }
+        
+        li {
+          float: Center;
+        }
+        
+        li a {
+          display: block;
+          text-align: center;
+          color: red;
+          padding: 25px 25px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: #FFFFFF;
+        }
+        </style>
+    
+    {% block bodyblock %}    
+    
+    {% endblock %}
+</body>
+</html>
